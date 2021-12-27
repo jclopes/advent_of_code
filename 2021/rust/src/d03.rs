@@ -66,35 +66,33 @@ fn p2(values: Vec<u32>, size: usize) -> u32 {
     let mut co2: u32 = 0;
     let mask_vec = mask(size);
     
-    let mut d = values.clone();
+    let mut v = values.clone();
     for i in 0..size {
-        let c = &d;
-        if c.len() <= 1 {
-            oxygen = c[0];
+        if v.len() <= 1 {
+            oxygen = v[0];
             break;
         }
-        let (a, b): (Vec<_>, Vec<_>) = c.into_iter()
-        .partition(|&&e| e & mask_vec[i] != 0);
+        let (a, b): (Vec<_>, Vec<_>) = v.into_iter()
+        .partition(|&e| e & mask_vec[i] != 0);
         if a.len() >= b.len() {
-            d = a;
+            v = a;
         } else {
-            d = b;
+            v = b;
         }
     }
 
-    let mut d = values.clone();
+    let mut v = values.clone();
     for i in 0..size {
-        let c = &d;
-        if c.len() <= 1 {
-            co2 = c[0];
+        if v.len() <= 1 {
+            co2 = v[0];
             break;
         }
-        let (a, b): (Vec<_>, Vec<_>) = c.into_iter()
-        .partition(|&&e| e & mask_vec[i] != 0);
+        let (a, b): (Vec<_>, Vec<_>) = v.into_iter()
+        .partition(|&e| e & mask_vec[i] != 0);
         if b.len() <= a.len() {
-            d = b;
+            v = b;
         } else {
-            d = a;
+            v = a;
         }
     }
 
