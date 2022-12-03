@@ -1,2 +1,8 @@
 # macos
 .DS_Store
+
+# rust
+Cargo.lock
+debug/
+target/
+**/*.rs.bk
