@@ -3,6 +3,7 @@ mod d02;
 mod d03;
 mod d04;
 mod d05;
+mod d06;
 
 fn main() {
 
@@ -30,4 +31,9 @@ fn main() {
 
     println!("\tpart 1: {}", d05::p1());
     println!("\tpart 2: {}", d05::p2());
+
+    println!("Day 06");
+
+    println!("\tpart 1: {}", d06::p1());
+    println!("\tpart 2: {}", d06::p2());
 }
