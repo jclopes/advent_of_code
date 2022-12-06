@@ -65,13 +65,7 @@ fn round_score(player_a: i32, player_b: i32) -> i32 {
 }
 
 fn read_input() -> Vec<String> {
-    let input = lines_from_file("../input/02.txt").unwrap();
-
-    let mut res: Vec<String> = Vec::new();
-    for l in input {
-        res.push(l.trim().to_string());
-    }
-    return res;
+    return lines_from_file("../input/02.txt").unwrap();
 }
 
 fn lines_from_file(filename: impl AsRef<Path>) -> io::Result<Vec<String>> {

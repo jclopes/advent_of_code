@@ -65,13 +65,7 @@ fn parse_line(line: &str) -> [u32; 4] {
 }
 
 fn read_input() -> Vec<String> {
-    let input = lines_from_file("../input/04.txt").unwrap();
-
-    let mut res: Vec<String> = Vec::new();
-    for l in input {
-        res.push(l.trim().to_string());
-    }
-    return res;
+    return lines_from_file("../input/04.txt").unwrap();
 }
 
 fn lines_from_file(filename: impl AsRef<Path>) -> io::Result<Vec<String>> {
