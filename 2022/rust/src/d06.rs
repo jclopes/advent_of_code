@@ -7,35 +7,26 @@ use std::{
 pub fn p1() -> u32 {
     let input = read_input();
 
-    let mut p = 0;
-    let mut window = Vec::new();
-    for c in input.chars() {
-        window.push(c);
-        if window.len() > 4 {
-            window.remove(0);
-        }
-        p += 1;
-        if window.len() < 4 { continue; }
-        if is_marker(&window, 4) {
-            break;
-        }
-    }
-    return p;
+    return find_marker(&input, 4);
 }
 
 pub fn p2() -> u32 {
     let input = read_input();
 
+    return find_marker(&input, 14);
+}
+
+fn find_marker(input: &String, size: usize) -> u32 {
     let mut p = 0;
     let mut window = Vec::new();
     for c in input.chars() {
         window.push(c);
-        if window.len() > 14 {
+        if window.len() > size {
             window.remove(0);
         }
         p += 1;
-        if window.len() < 14 { continue; }
-        if is_marker(&window, 14) {
+        if window.len() < size { continue; }
+        if is_marker(&window, size) {
             break;
         }
     }
