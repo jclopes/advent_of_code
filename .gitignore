@@ -6,3 +6,6 @@ Cargo.lock
 debug/
 target/
 **/*.rs.bk
+
+# python
+__pycache__
