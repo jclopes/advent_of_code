@@ -1,6 +1,3 @@
-#! /bin/env python
-
-import sys
 import pathlib
 
 def p1(data):
@@ -28,6 +25,3 @@ def main(input_file):
 
     p2_res = p2(data)
     print(p2_res)
-
-if __name__ == '__main__':
-    main()
