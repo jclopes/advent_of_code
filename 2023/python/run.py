@@ -15,7 +15,6 @@ def main():
 	if len(day) == 1: day = "0" + day
 
 	input_file = os.path.join(input_folder, day + ".txt")
-	print(input_file)
 
 	module = __import__('d' + day)
 	func = getattr(module, 'main')
